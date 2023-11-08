@@ -1,26 +1,32 @@
 #include <iostream>
 
-class list {
-	// circular double linked list
-	// last element have access to the head of the list
-	// head of the list have access to the last element
+// circular double linked list
+// last element has access to the head of the list
+// the head of the list has access to the last element
+class DoublyLinkedList {
 private :
-	// head is static so every object has access to it
-	static inline list* head = nullptr ;
+	//inner class "node" defines a number that has pointers to the next and previous elements of the list
+	//this class is inner because it will only be used in this class.
+	//it is not suitable for other classes
+	class node {
+	public:
+		node(int value) : value(value) {
+
+		}
+		int value{};
+		node* next = NULL;
+		node* prev = NULL;
+	};
+
+	node* head = nullptr ;
 public:
-	int value{};
-	list* next = NULL;
-	list* prev = NULL;
-	
 	void push_back(int number) {
 		if (head == nullptr) {
-			head = this;
-			value = number;
+			head = new node(number);
 			return;
 		}
-		list* new_node = new list();
-		list* last_element = (prev == nullptr ? head : head->prev);
-		new_node->value = number;
+		node* new_node = new node(number);
+		node* last_element = (head->prev == nullptr ? head : head->prev);
 		new_node->next = head;
 		new_node->prev = last_element;
 		last_element->next = new_node;
@@ -29,13 +35,11 @@ public:
 
 	void push_front(int number) {
 		if (head == nullptr) {
-			head = this;
-			value = number;
+			head = new node(number);
 			return;
 		}
-		list* new_node = new list();
+		node* new_node = new node(number);
 
-		new_node->value = number;
 		new_node->next = head;
 
 		new_node->prev = ( head->prev == nullptr ? head : head->prev );
@@ -43,11 +47,10 @@ public:
 		new_node->prev->next = new_node;
 
 		head = new_node;
-
 	}
 
 	void find(int number) {
-		list* current = head;
+		node* current = head;
 		while (current->next != head) {
 			if (current->value != number && current->next != head) {
 				current = current->next;
@@ -61,31 +64,40 @@ public:
 		}
 		std::cout << "Number " << number << " is not found" << "\n";
 	}
-	// we can find the length of a list either by recursion or by loop
-	int find_length(list* current = head) {
-		if (current->next != head) {
-			return find_length(current->next) + 1;
-		}
-		else return 1;
-	}
-	// 50 40 10
-	// 10 40 50
-	void reverse() {
-		list* current = head;
-		list* next = current->next;
-		list* prev = current->prev;
 
-		while (next != head) {
-			next = current->next;
-			current->next = prev;
-			prev = current;
-			current = next;
+	int find_length() {
+		node* current = head;
+		if (current == nullptr) {
+			return 0;
 		}
-		head = current->next;
+		else {
+			int count = 1;
+			while (current->next != head) {
+				count++;
+				current = current->next;
+			}
+			return count;
+		}
+	}
+
+	void reverse() {
+		if (head == nullptr) {
+			return; // Empty list, nothing to reverse.
+		}
+
+		node* current = head;
+		do {
+			node* temp = current->next;
+			current->next = current->prev;
+			current->prev = temp;
+			current = temp;
+		} while (current != head);
+
+		head = head->next; // Update the head to the new head after reversal.
 	}
 
 	void print() {
-		list* current = head;
+		node* current = head;
 		while (current->next != head) {
 			std::cout << current->value << ' ';
 			current = current->next;
@@ -95,15 +107,18 @@ public:
 };
 
 int main() {
-	list list;
+	DoublyLinkedList list;
 
-	list.push_back(10);
-	list.push_front(40);
-	list.push_front(50);
 	list.push_back(29);
 	list.push_back(30);
 	list.push_back(2);
+	list.print();
 	list.push_back(5);
+	list.push_back(10);
+	list.print();
+	list.push_front(40);
+	list.push_front(50);
+	std::cout << "\n";
 	list.print();
 	std::cout << "\n\n";
 	list.find(2);
@@ -114,7 +129,6 @@ int main() {
 	std::cout << list.find_length();
 	std::cout << "\n";
 	list.reverse();
-	list.find(2);
+	list.find(29);
 	list.print();
-	std::cout << " " << list.next << " " << list.prev << " ";
 }

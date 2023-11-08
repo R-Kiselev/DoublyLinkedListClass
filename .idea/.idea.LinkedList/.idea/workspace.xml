@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b9d0d226-6606-43b5-99a7-6eac2e261028" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/FileContentIndex/19d348e9-d381-4c08-8a13-2550a72c9809.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/FileContentIndex/c1f4bb97-0913-4058-b351-0a20898ee320.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/FileContentIndex/dc9c5f01-4321-4420-996a-34b24c798b63.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LinkedList/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LinkedList/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/v17/Browse.VC.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LinkedList/v17/Browse.VC.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/List.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/List.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/x64/Debug/LinkedList.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/x64/Debug/LinkedList.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/x64/Debug/List.obj" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/x64/Debug/List.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/x64/Debug/list.obj.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/LinkedList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/LinkedList.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/LinkedList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/LinkedList.pdb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XuGaZhFPXVUk3WsdFaBpM54EDP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9d0d226-6606-43b5-99a7-6eac2e261028" name="Changes" comment="" />
+      <created>1699471618035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699471618035</updated>
+      <workItem from="1699471623692" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
